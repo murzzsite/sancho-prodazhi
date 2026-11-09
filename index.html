@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Санчо — найду винтик в ваших продажах</title>
+<meta name="description" content="Санчо, 28 лет в продажах. Находит одно слабое место в продажах и докручивает его за 21 день. Онлайн-курс и «6 шагов продаж» для экспертов.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<header class="bar" id="header">
+  <a class="wordmark" href="#top">Санчо</a>
+  <nav class="nav" id="nav">
+    <a href="#vintiki">Где винтик</a>
+    <a href="#calc">Расчёт</a>
+    <a href="#kurs">Курс</a>
+    <a href="#price">Цены</a>
+    <a href="#faq">Вопросы</a>
+  </nav>
+  <a class="btn btn--sm" href="#contact">На разбор</a>
+  <button class="burger" id="burger" aria-label="Меню" aria-expanded="false"><span></span><span></span></button>
+</header>
+
+<main id="top">
+
+<section class="hero" id="hero">
+  <div class="hero__text">
+    <h1 class="split">Один винтик — и продажи +47%</h1>
+    <p class="hero__lead rise">Санчо, 28 лет в продажах. Покажу, где вы теряете прибыль, и за 21 день доверну это место.</p>
+    <div class="hero__act rise">
+      <a class="btn" href="#contact">Записаться на разбор</a>
+      <a class="link" href="https://t.me/Sancho_cell_78" target="_blank" rel="noopener">Канал в Telegram</a>
+    </div>
+  </div>
+  <svg class="screw screw--hero" id="heroScrew" viewBox="0 0 100 100" aria-hidden="true">
+    <circle cx="50" cy="50" r="50" fill="var(--accent)"/>
+    <circle cx="50" cy="50" r="43" fill="var(--accent-2)"/>
+    <rect x="6" y="45" width="88" height="10" rx="5" fill="var(--bg)"/>
+  </svg>
+</section>
+
+<section class="about" id="about">
+  <div class="about__panel">
+    <h2 class="reveal">28 лет в продажах. Ищу ваш винтик.</h2>
+    <div class="about__cols">
+      <div class="reveal">
+        <h3>Телефон Белла и Меуччи</h3>
+        <p>Антонио Меуччи годами строил аппарат, который передаёт голос. Идея была гениальной, результата не было. Александр Белл взял ту же схему, нашёл один винтик и повернул его на три четверти оборота. Телефон зазвонил.</p>
+      </div>
+      <div class="reveal">
+        <h3>Так же в продажах</h3>
+        <p>Ко мне приходят после тренингов и сложных структур, а касса не щёлкнула. Я не изобретаю велосипед. Нахожу слабое место и докручиваю его. Средний рост моих клиентов за последние два месяца — 47%.</p>
+        <a class="btn" href="#contact">Найти мой винтик</a>
+      </div>
+    </div>
+    <div class="about__pics">
+      <figure class="disc disc--big reveal"><img src="img/avatar.jpg" width="320" height="320" alt="Санчо, консультант по продажам" loading="lazy"><figcaption>Санчо</figcaption></figure>
+      <figure class="disc reveal"><img src="img/meucci.jpg" width="960" height="1158" alt="Антонио Меуччи, портрет 1878 года" loading="lazy"><figcaption>Меуччи</figcaption></figure>
+      <figure class="disc reveal"><img src="img/bell.jpg" width="960" height="1422" alt="Александр Грэм Белл, портрет 1895 года" loading="lazy"><figcaption>Белл</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="band__in">
+    <p class="reveal">Петербург: театры, причалы, билеты. Продавать здесь начинал в группе компаний «Премьера» — там, где покупатель выбирает сердцем.</p>
+    <figure class="disc reveal"><img src="img/theatre.jpg" width="1280" height="849" alt="Александринский театр в Санкт-Петербурге" loading="lazy"></figure>
+    <figure class="disc reveal"><img src="img/neva.jpg" width="1280" height="848" alt="Катера на Большой Неве" loading="lazy"></figure>
+  </div>
+</section>
+
+<section class="vint" id="vintiki">
+  <h2 class="reveal">Где у вас винтик</h2>
+  <div class="vint__grid">
+    <ul class="rows" id="rows">
+      <li><button class="row is-on" type="button" aria-expanded="true"><span class="row__t">Презентация рассказывает, а не продаёт</span><span class="row__x">Главная задача презентации — вызвать состояние «хочу». Когда человек уже представляет, как пользуется продуктом, сделка в кармане.</span></button></li>
+      <li><button class="row" type="button" aria-expanded="false"><span class="row__t">На «дорого» вы отвечаете словами</span><span class="row__x">Словами мы передаём малую часть информации. Остальное — взгляд, пауза, интонация. Услышали возражение — не спорьте, покажите, что аргумент слабый.</span></button></li>
+      <li><button class="row" type="button" aria-expanded="false"><span class="row__t">Клиент считывает ваше состояние</span><span class="row__x">Клиент чувствует вас раньше, чем вы сказали «алло». Усталый продавец пахнет проблемами. Проблема не в воронке, а в вибрации.</span></button></li>
+      <li><button class="row" type="button" aria-expanded="false"><span class="row__t">У менеджера проседает самоценность</span><span class="row__x">Чем ниже самоценность менеджера, тем больше возражений. Это не врождённая харизма, а встраиваемый навык. Нужно 21 день.</span></button></li>
+    </ul>
+    <div class="preview" aria-live="polite">
+      <svg viewBox="0 0 100 100" aria-hidden="true" class="screw screw--prev"><circle cx="50" cy="50" r="50" fill="var(--accent)"/><rect x="6" y="46" width="88" height="8" rx="4" fill="var(--bg)" opacity=".0"/></svg>
+      <p class="preview__t" id="prevText">Главная задача презентации — вызвать состояние «хочу». Когда человек уже представляет, как пользуется продуктом, сделка в кармане.</p>
+      <a class="preview__a" href="https://t.me/Sancho_cell_78" target="_blank" rel="noopener">Читать в канале</a>
+    </div>
+  </div>
+</section>
+
+<section class="calc" id="calc">
+  <h2 class="reveal">Довернуть винтик</h2>
+  <div class="calc__grid">
+    <div class="calc__dial reveal">
+      <svg class="screw screw--calc" id="calcScrew" viewBox="0 0 100 100" aria-hidden="true">
+        <circle cx="50" cy="50" r="50" fill="var(--ink)"/>
+        <circle cx="50" cy="50" r="43" fill="#24384a"/>
+        <rect x="6" y="45" width="88" height="10" rx="5" fill="var(--accent)"/>
+      </svg>
+    </div>
+    <div class="calc__ctl reveal">
+      <label for="rev">Выручка в месяц, ₽</label>
+      <input id="rev" class="field" type="text" inputmode="numeric" value="1 000 000">
+      <label for="turn">Поворот: <b id="turnOut">¾ оборота</b></label>
+      <input id="turn" type="range" min="0" max="270" step="1" value="270">
+      <p class="calc__res">Дополнительно в месяц: <strong id="extra">470 000 ₽</strong><br>Рост: <strong id="pct">+47%</strong>. За год: <strong id="year">5 640 000 ₽</strong>.</p>
+      <p class="calc__pay" id="pay"></p>
+      <p class="note">Расчёт при среднем росте клиентов Санчо за последние два месяца. Это не гарантия: у каждого бизнеса свой винтик.</p>
+    </div>
+  </div>
+</section>
+
+<section class="proof" id="proof">
+  <div class="proof__board">
+    <div class="tile tile--head reveal"><h2>Цифры без рисовки</h2></div>
+    <div class="tile reveal"><b><span data-n="28">28</span></b><span>лет в продажах</span></div>
+    <div class="tile reveal"><b>+<span data-n="47">47</span>%</b><span>средний рост клиентов за 2 месяца, по данным Санчо</span></div>
+    <div class="tile reveal"><b><span data-n="21">21</span></b><span>день до результата в курсе</span></div>
+    <div class="tile reveal"><b><span data-n="6">6</span></b><span>шагов продаж для экспертов</span></div>
+    <div class="tile reveal"><b>В ЛС</b><span>запись на разбор: Санчо смотрит ваши продажи сам</span></div>
+  </div>
+</section>
+
+<section class="how" id="kurs">
+  <div class="how__intro">
+    <h2 class="reveal">21 день до результата</h2>
+    <p class="reveal">Навыки, которые используют лидеры рынка, встраиваются в команду за три недели. Без новой продуктовой матрицы: меняется состояние, с которого работают люди.</p>
+  </div>
+  <div class="acc" id="acc">
+    <button class="stage is-open" type="button" style="--c:#ff6b3d" aria-expanded="true"><span class="stage__n">Разбор</span><span class="stage__b">Находим, где теряется прибыль: презентация, ответы на возражения, состояние продавцов. Здесь же находится ваш винтик.</span></button>
+    <button class="stage" type="button" style="--c:#a9bfcd" aria-expanded="false"><span class="stage__n">Дни 1–7</span><span class="stage__b">Состояние и самоценность: внутренний стержень, из которого клиент читает уверенность без лишних аргументов.</span></button>
+    <button class="stage" type="button" style="--c:#c4d4de" aria-expanded="false"><span class="stage__n">Дни 8–14</span><span class="stage__b">Презентация, которая вызывает «хочу», и невербальная работа с «дорого» и «подумаю».</span></button>
+    <button class="stage" type="button" style="--c:#dde7ed" aria-expanded="false"><span class="stage__n">Дни 15–21</span><span class="stage__b">Закрепляем навык и считаем результат: сколько прибавили продажи после поворота винтика.</span></button>
+  </div>
+</section>
+
+<section class="price" id="price">
+  <div class="plan plan--main">
+    <h2>Курс на 21 день</h2>
+    <p class="plan__who">Для бизнеса и отделов продаж, которым нужен рост без пересборки продукта.</p>
+    <p class="plan__inc">«Как за 21 день увеличить продажи на +47% и более за счёт встраиваемых навыков, которые используют лидеры рынка». Разовая оплата.</p>
+    <div class="plan__foot"><div class="plan__price">250 000<small>₽</small></div><a class="btn btn--ink" href="#contact" data-plan="Курс 21 день — 250 000 ₽">Хочу курс</a></div>
+  </div>
+  <div class="plan plan--alt">
+    <h2>6 шагов продаж</h2>
+    <p class="plan__who">Для экспертов со своим продуктом или услугой.</p>
+    <p class="plan__inc">Шесть шагов от первого контакта до «да». Разовая оплата.</p>
+    <div class="plan__foot"><div class="plan__price">60 000<small>₽</small></div><a class="btn btn--ink" href="#contact" data-plan="6 шагов продаж — 60 000 ₽">Хочу шаги</a></div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <h2 class="reveal">Вопросы</h2>
+  <div class="cards" id="cards">
+    <article class="card is-open" style="--c:#ff6b3d;--i:0"><button type="button" class="card__h" aria-expanded="true"><span class="tab">Результат</span><span class="card__q">Гарантируете ли вы +47%?</span></button><p class="card__a">Нет. +47% — средний рост клиентов Санчо за последние два месяца, а не обещание. У каждого бизнеса свой винтик, его и ищем на разборе.</p></article>
+    <article class="card" style="--c:#a9bfcd;--i:1"><button type="button" class="card__h" aria-expanded="false"><span class="tab">Выбор</span><span class="card__q">Курс или «6 шагов»?</span></button><p class="card__a">Курс — для бизнеса и команды продавцов. «6 шагов» — для экспертов, которые продают свой продукт или услугу сами.</p></article>
+    <article class="card" style="--c:#c4d4de;--i:2"><button type="button" class="card__h" aria-expanded="false"><span class="tab">Разбор</span><span class="card__q">Что такое разбор?</span></button><p class="card__a">Первый разговор: Санчо смотрит ваши продажи и показывает, за счёт чего вы теряете прибыль. Оставьте заявку, условия назовём при связи.</p></article>
+    <article class="card" style="--c:#dde7ed;--i:3"><button type="button" class="card__h" aria-expanded="false"><span class="tab">Оплата</span><span class="card__q">Как платить?</span></button><p class="card__a">Оплата разовая, без подписки и абонентской платы. Порядок оплаты согласуем после разбора.</p></article>
+    <article class="card" style="--c:#ff6b3d;--i:4"><button type="button" class="card__h" aria-expanded="false"><span class="tab">Опыт</span><span class="card__q">Кто такой Санчо?</span></button><p class="card__a">Занимается продажами 28 лет, начинал в театральных кассах Петербурга. Пишет про продажи в Telegram-канале «Санчо может».</p></article>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="coupon">
+    <div class="coupon__l">
+      <h2>Найдём ваш винтик</h2>
+      <p>Оставьте контакты, и Санчо свяжется с вами по поводу разбора.</p>
+    </div>
+    <form class="coupon__r" id="leadForm" novalidate>
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+      <input type="hidden" name="plan" id="planField" value="">
+      <label class="sr" for="f-name">Имя</label>
+      <input class="field" id="f-name" name="name" placeholder="Ваше имя" autocomplete="name" required>
+      <label class="sr" for="f-phone">Телефон</label>
+      <input class="field" id="f-phone" name="phone" type="tel" placeholder="Телефон" autocomplete="tel">
+      <label class="sr" for="f-contact">Telegram</label>
+      <input class="field" id="f-contact" name="contact" placeholder="Telegram, например @nick">
+      <label class="sr" for="f-product">Что продаёте</label>
+      <input class="field" id="f-product" name="product" placeholder="Что продаёте">
+      <button class="submit" type="submit">Записаться на разбор</button>
+      <p class="form__ok" id="formMsg" role="status"></p>
+    </form>
+  </div>
+  <p class="contact__alt">Или напишите сразу: <a href="https://t.me/master_prodag_b_to_c" target="_blank" rel="noopener">@master_prodag_b_to_c</a> со словами «Хочу разбор».</p>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot__links">
+    <a href="https://t.me/Sancho_cell_78" target="_blank" rel="noopener">Telegram-канал</a>
+    <a href="https://vk.ru/prodazhi_sancho" target="_blank" rel="noopener">ВКонтакте</a>
+    <a href="https://t.me/master_prodag_b_to_c" target="_blank" rel="noopener">Написать Санчо</a>
+  </div>
+  <div class="foot__big" aria-hidden="true">Санчо</div>
+  <p class="foot__credit">Фото: Антонио Меуччи (1878) и А. Г. Белл (1895) — Wikimedia Commons, общественное достояние и CC0. «Alexandrinsky Theatre» и «Boats on Big Neva river» — Florstein (WikiPhotoSpace), CC BY-SA 4.0, Wikimedia Commons.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
