@@ -254,3 +254,24 @@ input[type=range]{width:100%;height:44px;accent-color:var(--accent);margin-botto
   html{scroll-behavior:auto}
   .js .split .w>span,.js .rise,.js .reveal{transform:none;opacity:1}
 }
+
+/* round 2 */
+.hero__photo{position:absolute;z-index:2;width:44svh;height:44svh;border-radius:50%;object-fit:cover;object-position:50% 14%;top:50%;margin-top:-22svh;right:-6svh;background:var(--surface)}
+.js .hero__photo{opacity:0;transform:scale(.8);transition:opacity .9s .3s,transform 1.1s .3s cubic-bezier(.16,1,.3,1)}
+.js .hero__photo.go{opacity:1;transform:none}
+.steps{margin:4px 0 0 1.2em;max-width:36ch;display:grid;gap:4px}
+.about__pics .disc--big{overflow:visible}
+.about__pics .disc--big img{border-radius:50%;object-position:50% 20%}
+.driver{position:absolute;width:118%;left:-6%;top:-6%;transform:rotate(-16deg);transform-origin:12% 50%;pointer-events:none;transition:transform .9s cubic-bezier(.16,1,.3,1)}
+.disc--big:hover .driver{transform:rotate(-4deg)}
+.band__in{grid-template-columns:repeat(4,1fr);align-items:start}
+.band__in p{grid-column:1/-1;font-size:clamp(1.15rem,1.6vw,1.6rem);max-width:60ch;line-height:1.35;margin-bottom:24px}
+.band .disc figcaption{margin-top:12px;text-align:center;font-weight:700}
+.band .disc img{aspect-ratio:1;object-fit:cover}
+@media (max-width:900px){
+  .hero__photo{width:52vw;height:52vw;right:-3vw;top:auto;bottom:-13vw;margin-top:0}
+  .band__in{grid-template-columns:1fr 1fr}
+}
+
+.about .btn{background:var(--ink);color:var(--bg)}
+.driver{top:12%;left:-2%}

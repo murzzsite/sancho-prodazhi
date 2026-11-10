@@ -20,7 +20,7 @@
     const words = h1.textContent.trim().split(/\s+/);
     h1.setAttribute('aria-label', h1.textContent.trim());
     h1.innerHTML = words.map((w, i) => `<span class="w" aria-hidden="true"><span style="--i:${i}">${w}</span></span>`).join(' ');
-    requestAnimationFrame(() => setTimeout(() => { h1.classList.add('go'); $$('.rise').forEach(e => e.classList.add('go')); }, 80));
+    requestAnimationFrame(() => setTimeout(() => { h1.classList.add('go'); $$('.rise,.hero__photo').forEach(e => e.classList.add('go')); }, 80));
   }
 
   // stagger reveal delays inside groups
