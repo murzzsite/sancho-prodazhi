@@ -133,6 +133,7 @@
     const btn = form.querySelector('button[type="submit"]'), orig = btn.textContent;
     const payload = {}; new FormData(form).forEach((v, k) => { payload[k] = v; });
     if (payload._gotcha) return;
+    if (!form.querySelector('#f-consent').checked) { msg.textContent = 'Отметьте согласие на обработку персональных данных.'; return; }
     if (!payload.name || (!payload.phone && !payload.contact)) { msg.textContent = 'Укажите имя и телефон или Telegram.'; return; }
     payload.calc = `выручка ${rev.value} ₽, поворот ${turnWord(+turn.value)}`;
     btn.disabled = true; btn.textContent = 'Отправляем...';
@@ -143,4 +144,13 @@
     } catch (err) { console.error(err); msg.textContent = 'Не отправилось. Напишите в Telegram: @master_prodag_b_to_c'; }
     finally { setTimeout(() => { btn.textContent = orig; btn.disabled = false; }, 2500); }
   });
+
+  // cookie notice
+  const ck = $('#cookie');
+  if (ck) {
+    let seen = false;
+    try { seen = localStorage.getItem('cookie-ok') === '1'; } catch (e) {}
+    if (!seen) ck.hidden = false;
+    $('#cookieOk').addEventListener('click', () => { ck.hidden = true; try { localStorage.setItem('cookie-ok', '1'); } catch (e) {} });
+  }
 })();

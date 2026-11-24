@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Проект Санчо — статус и материалы</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<style>
+.pj{max-width:880px;margin:0 auto;padding:96px var(--pad) 80px}
+.pj h1{font-size:clamp(2rem,1.2rem + 3.4vw,3.6rem);margin-bottom:12px}
+.pj h2{font-size:clamp(1.5rem,1.2rem + 1.4vw,2.2rem);max-width:none;margin:48px 0 16px}
+.pj .lead{color:var(--muted);margin-bottom:8px}
+.st{list-style:none;display:grid;gap:10px}
+.st li{background:#fff;border-radius:12px;padding:14px 16px 14px 56px;position:relative;line-height:1.35}
+.st li::before{content:"";position:absolute;left:16px;top:50%;width:28px;height:28px;margin-top:-14px;border-radius:50%;background:var(--ink)}
+.st li.done::after{content:"";position:absolute;left:25px;top:50%;width:9px;height:15px;margin-top:-10px;border:solid var(--bg);border-width:0 3px 3px 0;transform:rotate(45deg)}
+.st li.wip::before{background:var(--accent)}
+.st li.wip::after{content:"";position:absolute;left:23px;top:50%;width:12px;height:4px;margin-top:-2px;border-radius:2px;background:var(--ink)}
+.st small{display:block;color:var(--muted);margin-top:3px;font-size:.9rem}
+.tag{display:inline-block;font-size:.8rem;font-weight:700;border-radius:999px;padding:4px 10px;margin-bottom:10px;background:var(--steel-2)}
+.tag--bad{background:#ffd9cc}
+.rv{background:#fff;border-radius:12px;padding:16px;margin-bottom:12px}
+.rv q{display:block;quotes:none;font-weight:500;color:var(--muted);font-size:.95rem;margin-bottom:8px}
+.rv p{max-width:none;margin-bottom:12px}
+.cp{font:700 .95rem/1 var(--f);background:var(--ink);color:var(--bg);border:0;border-radius:999px;padding:14px 22px;cursor:pointer;min-height:44px}
+.cp.ok{background:var(--accent);color:var(--ink)}
+.poster{background:#fff;border:3px solid var(--ink);border-radius:18px;max-width:420px;margin:0 auto;padding:32px 24px;text-align:center}
+.poster h3{font-size:2rem;margin-bottom:8px}
+.poster p{margin:0 auto 16px}
+.qr{width:220px;height:220px;margin:0 auto 16px;border:3px dashed var(--ink);border-radius:12px;display:grid;place-items:center;padding:16px;font-weight:500;line-height:1.3;background:var(--surface)}
+.poster__by{font-weight:800;font-size:1.3rem;margin:8px 0 0}
+.miss{list-style:none;display:grid;gap:8px}
+.miss li{background:#fff;border-left:6px solid var(--accent);border-radius:8px;padding:12px 16px;line-height:1.35}
+.pj a{text-underline-offset:3px}
+@media print{.bar,.cp{display:none}.pj{padding-top:0}}
+</style>
+</head>
+<body>
+<header class="bar"><a class="wordmark" href="../">Санчо</a><a class="btn btn--sm" href="../">Сайт</a></header>
+<main class="pj">
+<h1>Проект Санчо</h1>
+<p class="lead">Пакет «Старт». Страница обновляется по мере работы. Обновлено: 24 ноября 2026 г.</p>
+
+<h2>Статус работ</h2>
+<ul class="st">
+<li class="done">Сайт подключён к домену санчо.online<small>Адрес в браузере: https://санчо.online</small></li>
+<li class="done">SEO-настройка сайта<small>Заголовок и описание страницы, canonical, карточка для соцсетей (Open Graph), микроразметка Person и Service, robots.txt, sitemap.xml, описания всех картинок.</small></li>
+<li class="done">Политика конфиденциальности<small>Страница privacy.html, ссылка в подвале и у формы заявки.</small></li>
+<li class="done">Согласие у формы заявки и плашка cookie<small>Без галочки заявка не отправится.</small></li>
+<li class="done">10 ответов на отзывы<small>Ниже, с кнопкой «Копировать».</small></li>
+<li class="done">Макет QR-плаката «Оставьте отзыв»<small>Ниже. Ссылка на отзыв появится после создания карточки.</small></li>
+<li class="wip">Реквизиты оператора в политике<small>Нужны ФИО, ИНН и адрес: вставим в политику и срок хранения данных.</small></li>
+<li class="wip">Карточки на Яндекс Картах, 2ГИС, Google<small>Ждём офлайн-адрес. Без адреса карточки не создаются, на сайте адреса нет.</small></li>
+<li class="wip">Рабочий QR-код на плакате<small>После создания карточки (или другой страницы для отзывов) подставим ссылку.</small></li>
+</ul>
+
+<h2>Ответы на отзывы</h2>
+<p class="lead">Пять на хорошие, пять на плохие или спорные. Подставьте имя, если оно есть в отзыве.</p>
+
+<span class="tag">Хорошие отзывы</span>
+<div id="good"></div>
+<span class="tag tag--bad">Плохие и спорные отзывы</span>
+<div id="bad"></div>
+
+<h2>QR-плакат «Оставьте отзыв»</h2>
+<div class="poster">
+<h3>Оставьте отзыв</h3>
+<p>Наведите камеру телефона на код и напишите, как всё прошло.</p>
+<div class="qr">Ссылка на отзыв появится после создания карточки</div>
+<p>Ваше мнение помогает улучшать работу.</p>
+<p class="poster__by">Санчо</p>
+</div>
+
+<h2>Чего не хватает</h2>
+<ul class="miss">
+<li>Реквизиты оператора для политики: ФИО, ИНН, адрес и срок хранения данных.</li>
+<li>Офлайн-адрес (если он есть) для карточек на картах.</li>
+<li>Ссылка на страницу отзывов для QR-кода.</li>
+</ul>
+</main>
+<script>
+const good=[
+["«Курс помог навести порядок в продажах»","Спасибо за отзыв и за то, что нашли время его написать. Рады, что курс оказался вам полезен. Если захотите разобрать следующий шаг, напишите нам."],
+["«Разбор показал, где мы теряем клиентов»","Благодарим за обратную связь. Разбор и нужен для того, чтобы увидеть слабое место. Будем рады узнать, что вы уже изменили."],
+["«Понятно объясняет, без воды»","Спасибо, это важно для нас. Стараемся говорить прямо и по делу. Если возникнут вопросы, задавайте."],
+["«Отдел продаж стал увереннее работать»","Спасибо за тёплые слова. Хорошо, что команда получила пользу. Будем рады дальше быть полезными."],
+["«Рекомендую»","Благодарим за рекомендацию. Нам очень приятно, что вы поделились своим опытом."]
+];
+const bad=[
+["«Не вижу результата»","Спасибо, что написали. Нам жаль, что ожидания пока не оправдались. Результат зависит от бизнеса и от внедрения, поэтому давайте разберём вашу ситуацию. Напишите нам в Telegram, и мы посмотрим, что можно уточнить."],
+["«Дорого»","Благодарим за мнение. Мы понимаем, что решение о цене нелёгкое. Стоимость и состав каждого формата указаны на сайте. Если нужно, подскажем, какой вариант подойдёт именно вам."],
+["«Ожидал другого»","Спасибо за откровенность. Нам важно понимать, что именно вы ожидали. Расскажите подробнее, и мы постараемся ответить и учесть это в работе."],
+["«Долго не отвечали»","Приносим извинения за ожидание. Спасибо, что указали на это. Напишите нам ещё раз, и мы вернёмся к вашему вопросу."],
+["«Непонятно, что входит в курс»","Спасибо за замечание. Мы уточним описание на сайте. А пока напишите, что именно осталось непонятным, и мы ответим."]
+];
+function render(id,arr){
+  const root=document.getElementById(id);
+  arr.forEach(([q,a])=>{
+    const d=document.createElement('div');d.className='rv';
+    const qq=document.createElement('q');qq.textContent='Отзыв: '+q;
+    const p=document.createElement('p');p.textContent=a;
+    const b=document.createElement('button');b.type='button';b.className='cp';b.textContent='Копировать';
+    b.addEventListener('click',async()=>{
+      try{await navigator.clipboard.writeText(a)}catch(e){
+        const t=document.createElement('textarea');t.value=a;document.body.appendChild(t);t.select();try{document.execCommand('copy')}catch(_){ }t.remove();
+      }
+      b.textContent='Скопировано';b.classList.add('ok');
+      setTimeout(()=>{b.textContent='Копировать';b.classList.remove('ok')},1800);
+    });
+    d.append(qq,p,b);root.appendChild(d);
+  });
+}
+render('good',good);render('bad',bad);
+</script>
+</body>
+</html>

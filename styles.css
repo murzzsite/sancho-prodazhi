@@ -275,3 +275,21 @@ input[type=range]{width:100%;height:44px;accent-color:var(--accent);margin-botto
 
 .about .btn{background:var(--ink);color:var(--bg)}
 .driver{top:12%;left:-2%}
+
+/* consent + cookie */
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:.9rem;line-height:1.35;margin-top:4px}
+.consent input{width:22px;height:22px;flex:none;margin-top:1px;accent-color:var(--ink)}
+.consent a{text-underline-offset:3px}
+.cookie{position:fixed;left:var(--pad);right:var(--pad);bottom:var(--pad);z-index:60;max-width:760px;margin:0 auto;background:#fff;color:var(--ink);border:2px solid var(--ink);border-radius:14px;padding:14px 18px;display:flex;gap:16px;align-items:center;box-shadow:0 10px 30px rgba(18,32,43,.18)}
+.cookie[hidden]{display:none}
+.cookie p{font-size:.9rem;line-height:1.35;max-width:none}
+.cookie__ok{flex:none;font:700 .95rem/1 var(--f);background:var(--ink);color:var(--bg);border:0;border-radius:999px;padding:14px 22px;cursor:pointer}
+@media (max-width:600px){.cookie{flex-direction:column;align-items:stretch;gap:10px}}
+
+/* text pages */
+.doc{max-width:820px;margin:0 auto;padding:110px var(--pad) 80px}
+.doc h1{font-size:clamp(2rem,1.3rem + 3vw,3.4rem);margin-bottom:24px;overflow-wrap:anywhere}
+.doc h2{font-size:1.5rem;letter-spacing:-.02em;max-width:none;margin:36px 0 10px}
+.doc p,.doc li{margin-bottom:10px;max-width:none}
+.doc ul{padding-left:1.2em}
+.doc .todo{background:#fff;border:2px dashed var(--accent);border-radius:8px;padding:2px 8px;font-weight:500}
