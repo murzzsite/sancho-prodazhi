@@ -141,6 +141,7 @@
       const r = await fetch(LEAD_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
       if (!r.ok) throw new Error('HTTP ' + r.status);
       msg.textContent = 'Заявка отправлена. Санчо свяжется с вами.'; form.reset();
+      try { if (window.ym) ym(114713656, 'reachGoal', 'lead'); } catch (e2) {}
     } catch (err) { console.error(err); msg.textContent = 'Не отправилось. Напишите в Telegram: @master_prodag_b_to_c'; }
     finally { setTimeout(() => { btn.textContent = orig; btn.disabled = false; }, 2500); }
   });
